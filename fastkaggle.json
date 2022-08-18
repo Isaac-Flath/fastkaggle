@@ -1,0 +1,1 @@
+{"competition": "titanic", "pip_cmd": "pip", "data_path": ".", "datasets_username": "isaacflath", "model_dataset_name": "models-titanic", "libraries_dataset_name": "libraries-titanic", "required_libraries": ["fastkaggle"]}
