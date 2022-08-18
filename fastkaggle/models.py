@@ -35,3 +35,4 @@ def push_fastai_learner(learner, # Fastai Learner
     learner.export(model_fname)
     learner.path = orig_path
     push_dataset(local_path,version_comment)
+    print(f"{ds_slug} update complete")

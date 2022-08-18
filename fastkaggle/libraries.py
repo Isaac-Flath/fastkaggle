@@ -88,3 +88,4 @@ def create_dependency_dataset(cfg_path='.', # Path to fastkaggle.json file
         print(f"-----Updating {cfg['libraries_dataset_name']} in Kaggle")
         push_dataset(local_path,version_notes)
     else: print(f"-----Kaggle dataset already up to date")
+    print(f"{ds_slug} update complete")
