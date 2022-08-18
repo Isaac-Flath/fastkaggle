@@ -63,7 +63,7 @@ def get_local_ds_ver(lib_path, # Local path dataset is stored in
 def create_dependency_dataset(cfg_path='.', # Path to fastkaggle.json file
                                 version_notes = "New Update",
                                ):
-    retain = ["dataset-metadata.json"],
+    retain = ["dataset-metadata.json"]
     cfg = get_config_values(cfg_path)
     
     pip_cmd=cfg['pip_cmd']
@@ -80,7 +80,7 @@ def create_dependency_dataset(cfg_path='.', # Path to fastkaggle.json file
     for item in local_path.ls():
         if item.name in retain: pass
         elif item.is_dir(): shutil.rmtree(item)
-        else: item.unlink()        
+        else: item.unlink()      
     get_pip_libraries(cfg['libraries_dataset_name'],cfg_path) 
     new_ds = Path(local_path).ls().sorted()
     

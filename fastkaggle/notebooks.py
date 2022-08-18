@@ -6,7 +6,7 @@ __all__ = ['nb2names', 'nb_meta', 'push_notebook']
 # %% ../05_notebooks.ipynb 3
 import os,json,subprocess, shutil
 import re,ast
-from string import punctuation
+import string
 
 from fastcore.utils import *
 from .core import *
@@ -22,15 +22,15 @@ def nb2names(file):
     bad_chars = '|'.join(string.punctuation+string.whitespace)
     translator = title.maketrans(bad_chars,'-'*len(bad_chars))
     id = title.translate(translator)
-    return title, id
+    return title, id.lower()
 
 # %% ../05_notebooks.ipynb 7
-def nb_meta(file, cfg_path='.',private=True, gpu=False, internet=True):
+def nb_meta(file, cfg_path='.',private=False, gpu=False, internet=True):
     "Get the `dict` required for a kernel-metadata.json file"    
-    print(cfg_path)
     cfg = get_config_values(cfg_path)
     competition = cfg['competition']
-    cfg_datasets = [cfg['model_dataset_name'],cfg['libraries_dataset_name']]
+    cfg_datasets = [f"{cfg['datasets_username']}/{cfg['model_dataset_name']}",
+                    f"{cfg['datasets_username']}/{cfg['libraries_dataset_name']}"]
     title,id = nb2names(file)    
 
     d = {
@@ -50,12 +50,12 @@ def nb_meta(file, cfg_path='.',private=True, gpu=False, internet=True):
     return d
 
 # %% ../05_notebooks.ipynb 9
-def push_notebook(file, path='.', private=True, gpu=False, internet=True):
+def push_notebook(file, cfg_path='.', private=False, gpu=True, internet=True):
     "Push notebook `file` to Kaggle Notebooks"
     meta = nb_meta(file=file, cfg_path=cfg_path, private=private, gpu=gpu, internet=internet)
-    path = Path(path)
+    path = Path(file).parent
     nm = 'kernel-metadata.json'
     path.mkdir(exist_ok=True, parents=True)
-    with open(path/nm, 'w') as f: json.dump(meta, f, indent=2)
+    with open(path/nm, 'w') as f: json.dump(meta, f, indent=2)    
     api = import_kaggle()
     api.kernels_push_cli(str(path))

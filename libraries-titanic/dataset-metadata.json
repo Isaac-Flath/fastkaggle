@@ -1,0 +1,37 @@
+{
+  "id": "isaacflath/libraries-titanic",
+  "id_no": 2420342,
+  "datasetSlugNullable": "libraries-titanic",
+  "ownerUserNullable": "isaacflath",
+  "usabilityRatingNullable": 0.25,
+  "titleNullable": "libraries-titanic",
+  "subtitleNullable": "",
+  "descriptionNullable": "",
+  "datasetId": 2420342,
+  "datasetSlug": "libraries-titanic",
+  "hasDatasetSlug": true,
+  "ownerUser": "isaacflath",
+  "hasOwnerUser": true,
+  "usabilityRating": 0.25,
+  "hasUsabilityRating": true,
+  "totalViews": 3,
+  "totalVotes": 0,
+  "totalDownloads": 9,
+  "title": "libraries-titanic",
+  "hasTitle": true,
+  "subtitle": "",
+  "hasSubtitle": true,
+  "description": "",
+  "hasDescription": true,
+  "isPrivate": false,
+  "keywords": [],
+  "licenses": [
+    {
+      "nameNullable": "CC0-1.0",
+      "name": "CC0-1.0",
+      "hasName": true
+    }
+  ],
+  "collaborators": [],
+  "data": []
+}

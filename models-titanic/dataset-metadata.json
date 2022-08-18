@@ -1,0 +1,39 @@
+{
+  "id": "isaacflath/models-titanic",
+  "id_no": 2420400,
+  "datasetSlugNullable": "models-titanic",
+  "ownerUserNullable": "isaacflath",
+  "usabilityRatingNullable": 0.375,
+  "titleNullable": "models-titanic",
+  "subtitleNullable": "",
+  "descriptionNullable": "",
+  "datasetId": 2420400,
+  "datasetSlug": "models-titanic",
+  "hasDatasetSlug": true,
+  "ownerUser": "isaacflath",
+  "hasOwnerUser": true,
+  "usabilityRating": 0.375,
+  "hasUsabilityRating": true,
+  "totalViews": 3,
+  "totalVotes": 0,
+  "totalDownloads": 3,
+  "title": "models-titanic",
+  "hasTitle": true,
+  "subtitle": "",
+  "hasSubtitle": true,
+  "description": "",
+  "hasDescription": true,
+  "isPrivate": false,
+  "keywords": [
+    "history"
+  ],
+  "licenses": [
+    {
+      "nameNullable": "CC0-1.0",
+      "name": "CC0-1.0",
+      "hasName": true
+    }
+  ],
+  "collaborators": [],
+  "data": []
+}

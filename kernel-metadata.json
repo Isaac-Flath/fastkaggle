@@ -1,0 +1,19 @@
+{
+  "id": "isaacflath/fastkaggle",
+  "title": "fastkaggle",
+  "code_file": "index.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "isaacflath/models-titanic",
+    "isaacflath/libraries-titanic"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "competitions/titanic"
+  ]
+}
